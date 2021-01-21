@@ -18,5 +18,5 @@ public enum Localization  // simply used as namespace
         }
     }
 
-    fileprivate static private(set) var overrideBundle: Bundle? = nil
+    internal static private(set) var overrideBundle: Bundle? = nil
 }

@@ -1,3 +1,6 @@
+import Foundation
+
+
 extension Double
 {
     public func localizedString(fractionDigits: Int? = nil, locale: Locale? = nil) -> String

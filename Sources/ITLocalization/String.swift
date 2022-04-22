@@ -14,7 +14,12 @@ extension String
         }
 
         let bundle = Localization.overrideBundle ?? Bundle.main
-        return bundle.localizedString(forKey: self, value: fallback, table: nil)
+        var replacement = bundle.localizedString(forKey: self, value: fallback, table: nil)
+        
+        if let fallback = fallback, replacement == self {
+            replacement = fallback
+        }
+        return replacement
     }
 
     func localized(args: CVarArg...) -> String
